@@ -161,7 +161,41 @@ $ hexo server
 
 说明 ：运行服务器前需要安装 hexo-server 插件
 
-$ npm install hexo-server --save</code></pre>
+$ npm install hexo-server --save
+详细信息请参考：https://hexo.io/docs/server.html</code></pre><p>5、hexo deploy</p>
+<pre><code>hexo deploy 命令用于部署网站，一般可以简写为 hexo d
+
+$ hexo deploy
+-g 选项，指定生成后部署，与 hexo g -d 等价
+说明 ：部署前需要修改 _config.yml 配置文件，下面以 git 为例进行说明
+
+deploy:
+    type: git
+    repo: &lt;repository url&gt;
+    branch: master
+    message: 自定义提交消息，默认为Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}
+详细信息请参考：https://hexo.io/docs/deployment.html</code></pre><p>6、hexo clean</p>
+<pre><code>hexo clean 命令用于清理缓存文件，是一个比较常用的命令
+
+$ hexo clean
+网站显示异常时可尝试此操作</code></pre><p>7、Option</p>
+<pre><code>（1）hexo --safe
+
+hexo --safe 表示安全模式，用于禁用加载插件和脚本
+
+$ hexo --safe
+安装新插件时遇到问题可尝试此操作
+
+（2）hexo --debug
+
+hexo --debug 表示调试模式，用于将消息详细记录到终端和 debug.log 文件
+
+$ hexo --debug
+（3）hexo --silent
+
+hexo --silent 表示静默模式，用于静默输出到终端
+
+$ hexo --silent</code></pre>
     </div>
 </article>
         </main>
