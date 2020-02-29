@@ -123,7 +123,7 @@
     
     
     <h2 class="post-title">
-        test
+        hexo 命令
     </h2>
     <ul class="post-date">
         <li>
@@ -134,8 +134,34 @@
         </li>
     </ul>
     <div class="post-content">
-        <p>总之现在就是很蒙蔽<br>可怜的小宝贝已经累得腰酸背痛筋骨痛<br>但是我对这个网站还是很蒙蔽<br>感觉这个主题很神奇<br>还没想好拿他来干mua<br>不知道为啥后面的话好像同步不上去</p>
+        <p>1、hexo init</p>
+<pre><code>hexo init 命令用于初始化本地文件夹为网站的根目录
 
+$ hexo init [folder]
+folder 可选参数，用以指定初始化目录的路径，若无指定则默认为当前目录</code></pre><p>2、hexo new</p>
+<pre><code>hexo new 命令用于新建文章，一般可以简写为 hexo n
+
+$ hexo new [layout] &lt;title&gt;
+layout 可选参数，用以指定文章类型，若无指定则默认由配置文件中的 default_layout 选项决定
+
+title 必填参数，用以指定文章标题，如果参数值中含有空格，则需要使用双引号包围</code></pre><p>3、hexo generate</p>
+<pre><code>hexo generate 命令用于生成静态文件，一般可以简写为 hexo g
+
+$ hexo generate
+-d 选项，指定生成后部署，与 hexo d -g 等价
+详细信息请参考：https://hexo.io/docs/generating</code></pre><p>4、hexo server</p>
+<pre><code>hexo server 命令用于启动本地服务器，一般可以简写为 hexo s
+
+$ hexo server
+-p 选项，指定服务器端口，默认为 4000
+
+-i 选项，指定服务器 IP 地址，默认为 0.0.0.0
+
+-s 选项，静态模式 ，仅提供 public 文件夹中的文件并禁用文件监视
+
+说明 ：运行服务器前需要安装 hexo-server 插件
+
+$ npm install hexo-server --save</code></pre>
     </div>
 </article>
         </main>
