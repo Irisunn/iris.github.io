@@ -18,7 +18,7 @@
     <meta name="keywords" content="肥仔之家">
 
 
-<title>hexo 命令 | Iris  blog</title>
+<title>Hello World | Iris  blog</title>
 
 
 
@@ -66,6 +66,14 @@
                 
                     <a class="menu-item" href="/about">About</a>
                 
+                    <a class="menu-item" href="/default/">EN</a>
+                
+                    <a class="menu-item" href="/ja/">JA</a>
+                
+                    <a class="menu-item" href="/ch-TW">繁体中文</a>
+                
+                    <a class="menu-item" href="/ch-CN">简体中文</a>
+                
                 <input id="switch_default" type="checkbox" class="switch_default">
                 <label for="switch_default" class="toggleBtn"></label>
             </div>
@@ -91,6 +99,14 @@
                 
                     <a class="menu-item" href="/about">About</a>
                 
+                    <a class="menu-item" href="/default/">EN</a>
+                
+                    <a class="menu-item" href="/ja/">JA</a>
+                
+                    <a class="menu-item" href="/ch-TW">繁体中文</a>
+                
+                    <a class="menu-item" href="/ch-CN">简体中文</a>
+                
             </div>
         </div>
     </nav>
@@ -113,11 +129,73 @@
             <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">hexo 命令</h1>
+            <h1 class="post-title">Hello World</h1>
             
                 <div class="post-meta">
                     
@@ -142,68 +220,20 @@
         </header>
 
         <div class="post-content">
-            <p>1、hexo init</p>
-<pre><code>hexo init 命令用于初始化本地文件夹为网站的根目录
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
-$ hexo init [folder]
-folder 可选参数，用以指定初始化目录的路径，若无指定则默认为当前目录</code></pre><p>2、hexo new</p>
-<pre><code>hexo new 命令用于新建文章，一般可以简写为 hexo n
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-$ hexo new [layout] &lt;title&gt;
-layout 可选参数，用以指定文章类型，若无指定则默认由配置文件中的 default_layout 选项决定
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-title 必填参数，用以指定文章标题，如果参数值中含有空格，则需要使用双引号包围</code></pre><p>3、hexo generate</p>
-<pre><code>hexo generate 命令用于生成静态文件，一般可以简写为 hexo g
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-$ hexo generate
--d 选项，指定生成后部署，与 hexo d -g 等价
-详细信息请参考：https://hexo.io/docs/generating</code></pre><p>4、hexo server</p>
-<pre><code>hexo server 命令用于启动本地服务器，一般可以简写为 hexo s
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
-$ hexo server
--p 选项，指定服务器端口，默认为 4000
-
--i 选项，指定服务器 IP 地址，默认为 0.0.0.0
-
--s 选项，静态模式 ，仅提供 public 文件夹中的文件并禁用文件监视
-
-说明 ：运行服务器前需要安装 hexo-server 插件
-
-$ npm install hexo-server --save
-详细信息请参考：https://hexo.io/docs/server.html</code></pre><p>5、hexo deploy</p>
-<pre><code>hexo deploy 命令用于部署网站，一般可以简写为 hexo d
-
-$ hexo deploy
--g 选项，指定生成后部署，与 hexo g -d 等价
-说明 ：部署前需要修改 _config.yml 配置文件，下面以 git 为例进行说明
-
-deploy:
-    type: git
-    repo: &lt;repository url&gt;
-    branch: master
-    message: 自定义提交消息，默认为Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}
-详细信息请参考：https://hexo.io/docs/deployment.html</code></pre><p>6、hexo clean</p>
-<pre><code>hexo clean 命令用于清理缓存文件，是一个比较常用的命令
-
-$ hexo clean
-网站显示异常时可尝试此操作</code></pre><p>7、Option</p>
-<pre><code>（1）hexo --safe
-
-hexo --safe 表示安全模式，用于禁用加载插件和脚本
-
-$ hexo --safe
-安装新插件时遇到问题可尝试此操作
-
-（2）hexo --debug
-
-hexo --debug 表示调试模式，用于将消息详细记录到终端和 debug.log 文件
-
-$ hexo --debug
-（3）hexo --silent
-
-hexo --silent 表示静默模式，用于静默输出到终端
-
-$ hexo --silent</code></pre>
         </div>
 
         
@@ -235,10 +265,6 @@ $ hexo --silent</code></pre>
                 <span>Tag(s):</span>
                 <span class="tag">
                     
-                    
-                        <a href="/tags/info/"># info</a>
-                    
-                        
                 </span>
             </div>
             <div>
@@ -285,7 +311,7 @@ $ hexo --silent</code></pre>
     </section>
 
 
-<span id="/ja/2020/02/29/hexo%E5%91%BD%E4%BB%A4/" class="leancloud-visitors view" data-flag-title="hexo 命令">
+<span id="/ja/2020/02/29/hexo%E5%91%BD%E4%BB%A4/" class="leancloud-visitors view" data-flag-title="Hello World">
   <em class="post-meta-item-text">Pageviews:</em>
   <i class="leancloud-visitors-count">loading</i>
 </span>
