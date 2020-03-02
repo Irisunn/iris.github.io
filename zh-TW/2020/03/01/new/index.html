@@ -1,184 +1,217 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN,zh-TW,ja">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-    <meta name="keywords" content="hexo, autumn" />
-    <title>
-        Iris  blog
-    </title>
-    <!-- favicon -->
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="iris大肥仔">
+
+
+    <meta name="subtitle" content="山鸽友情赞助">
+
+
+    <meta name="description" content="肥仔放飞自我的地方">
+
+
+    <meta name="keywords" content="肥仔之家">
+
+
+<title>new | Iris  blog</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
     
-    <link rel="icon" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/favicon.ico" />
-     
-<link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    
 
 
-    <!-- highlight -->
-    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css" />
-    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
-    <script>
-        hljs.initHighlightingOnLoad()
-    </script>
-    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@2.0.0/dist/main.js"></script>
 
-    <script>
-        infiniteScroll()
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
 
-        window.addEventListener('DOMContentLoaded', function () {
-            const [
-                mainTitle,
-                mobileMenu,
-                mobileMainTitle,
-                mobileMenuBtn,
-                ipadMenuBtn,
-                aside,
-                closeBtn,
-            ] = getEle(
-                '#main-title',
-                '.mobile-menu',
-                '.mobile-menu h3',
-                '.mobile-menu button',
-                '.ipad-menu',
-                'aside',
-                'aside .close',
-            )
-            const io = new IntersectionObserver(entries => {
-                if (entries[0].intersectionRatio <= 0) {
-                    mobileMainTitle.classList.remove('invisibile')
-                } else {
-                    mobileMainTitle.classList.add('invisibile')
-                }
-            })
-            io.observe(mainTitle)
 
-            clickToggleAside(mobileMenuBtn)
-            clickToggleAside(ipadMenuBtn)
-            clickToggleAside(closeBtn, false)
 
-            const isMenuVisible = window.getComputedStyle(mobileMenu).display !== 'none'
-            if (isMenuVisible) document.body.style.background = 'none'
+    
+    
+        
+    
 
-            function getEle(...args) {
-                return args.map(arg => document.querySelector(arg))
-            }
 
-            function clickToggleAside(btn, show = true) {
-                btn.addEventListener('click', function () {
-                    if (show) {
-                        aside.style.display = 'block'
-                    } else {
-                        aside.style.display = 'none'
-                    }
-                })
-            }
-        })
-    </script>
 <meta name="generator" content="Hexo 4.2.0"></head>
-
-<body style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
-    <div class="container">
-        <header class="header">
-    <nav class="mobile-menu" style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
-        <h3 class="invisibile">
-            <a href="/" class="logo">
-                Iris  blog
-            </a>
-        </h3>
-        <button class="menu">menu</button>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Bentham&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
     </nav>
 
-    <button class="ipad-menu menu">menu</button>
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Bentham&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
 
-    <h1 class="title" id="main-title">
-        <a href="/" class="logo">
-            Iris  blog
-        </a>
-    </h1>
-    <h2 class="desc">
-        山鸽友情赞助
-    </h2>
-
-    <div class="links">
-        <ul>
-            
-            <li>
-                <a href="https://yishanlll.xyz" target="_blank" rel="noopener">
-                    ♥去康康小山鸽(￣▽￣)"
-                </a>
-            </li>
-            
-            <li>
-                <a href="https://music.163.com/#/user/home?id=448508707" target="_blank" rel="noopener">
-                    ♥我的网易云          ♥
-                </a>
-            </li>
-            
-            <li>
-                <a href="https://github.com/Irisunn/iris.github.io/graphs/traffic" target="_blank" rel="noopener">
-                    ---📎github-traffic📎---
-                </a>
-            </li>
-            
-        </ul>
-    </div>
 </header>
-        <main class="main">
-            <article class="post">
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
     
     
-    <h4 class="post-cat">
-        <a href="/categories/%E6%97%A5-%E6%9D%82/">
-            日 . 杂 .
-        </a>
-    </h4>
-    
-    
-    <h2 class="post-title">
-        new
-    </h2>
-    <ul class="post-date">
-        <li>
-            2020-03-01
-        </li>
-        <li>
-            iris大肥仔
-        </li>
-    </ul>
-    <div class="post-content">
-        <p>Hello World，bye world<br>总之现在就是很蒙蔽<br>可怜的小宝贝已经累得腰酸背痛筋骨痛<br>但是我对这个网站还是很蒙蔽<br>好像添加音乐也不太行<br>脑壳疼<br><img src="/2020/03/01/new/1.JPG" alt></p>
 
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">new</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">iris大肥仔</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">三月 1, 2020&nbsp;&nbsp;0:46:42</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E6%97%A5-%E6%9D%82/">日 . 杂 .</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>Hello World，bye world<br>总之现在就是很蒙蔽<br>可怜的小宝贝已经累得腰酸背痛筋骨痛<br>但是我对这个网站还是很蒙蔽<br>好像添加音乐也不太行<br>脑壳疼<br><img src="/2020/03/01/new/1.JPG" alt></p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>iris大肥仔</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://yoursite.com/2020/03/01/new/">http://yoursite.com/2020/03/01/new/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"># 碎碎念</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2020/03/01/tips/">TIPS</a>
+            
+            
+            <a class="next" rel="next" href="/2020/02/29/hexo%E5%91%BD%E4%BB%A4/">hexo 命令</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© iris大肥仔 | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
     </div>
-</article>
+</footer>
 
-
-        </main>
-        <aside class="aside">
-            <div class="close"></div>
-            <section class="aside-section">
-                
-    <h1>Categories</h1>
-
-    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/tips/">tips</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5-%E6%9D%82/">日 . 杂 .</a></li></ul>
-
-            </section>
-            <section class="aside-section">
-                
-    <h1>Archives</h1>
-
-    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/">2020</a></li></ul>
-
-
-            </section>
-            <section class="aside-section tag">
-                
-    <h1>Tags</h1>
-
-    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/info/" rel="tag">info</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tips/" rel="tag">tips</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" rel="tag">碎碎念</a></li></ul>
-
-            </section>
-        </aside>
     </div>
 </body>
-
 </html>
