@@ -18,7 +18,7 @@
     <meta name="keywords" content="肥仔之家">
 
 
-<title>评论区 | Iris  blog</title>
+<title>不是很开心的亚子 | Iris  blog</title>
 
 
 
@@ -113,11 +113,73 @@
             <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">评论区</h1>
+            <h1 class="post-title">不是很开心的亚子</h1>
             
                 <div class="post-meta">
                     
@@ -126,14 +188,14 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">三月 2, 2020&nbsp;&nbsp;19:05:57</a>
+                        Date: <a href="#">三月 10, 2020&nbsp;&nbsp;23:13:45</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/%E6%97%A5-%E6%9D%82%E3%80%82/">日  杂。</a>
+                                <a href="/categories/%E6%97%A5-%E6%9D%82%E3%80%82/">日 杂。</a>
                             
                         </span>
                     
@@ -142,7 +204,14 @@
         </header>
 
         <div class="post-content">
-            <p>我有评论区辣！</p>
+            <h2 id="part1"><a href="#part1" class="headerlink" title="part1"></a>part1</h2><p>思绪有点混乱<br>不知道为什么，最近心情很奇怪<br>可能就是从歇斯底里的和爸妈吵了一架开始吧<br>我总是感觉活着很痛苦，但从未觉得不值得。<br>我也不知道自己想要什么<br>大概是想要安稳，想要争一口气，想要事事顺心？<br>然后逐渐陷入了低效率的自我安慰<br>可能我从来都是神经质的⑧<br>或许是我太过悲观了，太自我太狭隘，才导致这样令人困扰的心态</p>
+<p>……</p>
+<h2 id="part2"><a href="#part2" class="headerlink" title="part2"></a>part2</h2><p>我经常过于关注自己内心的感受<br>因而忽略了客观事实的残酷<br>承受着好处然后<br>忽略了别人的感受<br>低幼，粗暴，不成熟，情绪化。<br>马上就要奔二了，再然后就奔三<br>希望自己好好学习情绪管理<br>努力克服惰性</p>
+<p>……</p>
+<h2 id="part3-一点思考"><a href="#part3-一点思考" class="headerlink" title="part3 一点思考"></a>part3 一点思考</h2><p>人们都在依靠信念中的某个不可得之物<br>永远得不到或者<br>得到之后追寻下一个<br>因为爱憎恨求不得，七情六欲总是直击人性<br>人类总会被情绪淹没，被欲望驱使</p>
+<p>有观点认为，人类的伟大之处在于反抗最底层基本的欲望<br>没有选择个人的最优解，而是选择了种族的更优解<br>由于人类的社会性<br>衍生出的家族，部落，村落，民族，城邦，联邦，国家，意识形态<br>使人类的联系愈发紧密，物质和精神和基因的交换愈发频繁<br>而高效的交换与物质利用需要进行管理<br>强大的精神需要经验的润泽与充分的支持与肯定<br>于是有了商行，有了工会，有了行政者，有了文化传承，有了宗教信仰，有了种族主义<br>每个人都变成了管理者、被管理者，支持者、被支持者<br>寻觅着生活的更优解和内心的满足安定<br>但其实人类文明的发展有一个内部矛盾<br>就是不断追求更优的物质和精神时<br>物质会因为工业升级而贫乏<br>为了更加精致高效，产业链被整合，原料同质化，竞争加剧，资源匮乏<br>精神会因为更高层次而空虚<br>为了满足安心获得认同感而听从于上级或者政体就必定会被规则束缚变得更加焦虑</p>
+<p>复盘这个十分不完善的逻辑<br>可以看出人类、社会的发展并不是马克思所谓曲折向上的<br>只能是在发展与停滞中寻找最优解的过程反复试探<br>在后期由于边际效应成效甚微<br>最后走向稳定或者毁灭</p>
+<p>我是人<br>也许也行该寻找方法<br>找到我的解吧<br>我总是在迷茫<br>不过有了山鸽之后会好很多<br>但生活本来就不只充斥着酒肉娱乐<br>浮于表面的本来就很少<br>活得简单就有简单的快乐痛苦<br>活得复杂就只能由复杂的快乐和痛苦了<br>或者说好听一点，全方位，多角度，宽层次的快乐和痛苦</p>
 
         </div>
 
@@ -175,10 +244,6 @@
                 <span>Tag(s):</span>
                 <span class="tag">
                     
-                    
-                        <a href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"># 碎碎念</a>
-                    
-                        
                 </span>
             </div>
             <div>
@@ -189,10 +254,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2020/03/10/%E4%B8%8D%E6%98%AF%E5%BE%88%E5%BC%80%E5%BF%83%E7%9A%84%E4%BA%9A%E5%AD%90/">不是很开心的亚子</a>
             
-            
-            <a class="next" rel="next" href="/2020/03/01/%E5%85%B3%E4%BA%8E%E6%96%87%E7%AB%A0%E7%BC%96%E8%BE%91/">关于文章编辑的那点事</a>
+            <a class="next" rel="next" href="/2020/03/02/%E8%AF%84%E8%AE%BA%E5%8C%BA/">评论区</a>
             
         </section>
 
@@ -225,7 +288,7 @@
     </section>
 
 
-<span id="/2020/03/02/%E8%AF%84%E8%AE%BA%E5%8C%BA/" class="leancloud-visitors view" data-flag-title="评论区">
+<span id="/2020/03/10/%E4%B8%8D%E6%98%AF%E5%BE%88%E5%BC%80%E5%BF%83%E7%9A%84%E4%BA%9A%E5%AD%90/" class="leancloud-visitors view" data-flag-title="不是很开心的亚子">
   <em class="post-meta-item-text">Pageviews:</em>
   <i class="leancloud-visitors-count">loading</i>
 </span>
